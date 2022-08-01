@@ -22,20 +22,20 @@ let randomUser =  getRandomUser()
 export const yearOptions = [
     {
         value:'FE',
-        label:'First Year'
+        label:'JSS1'
     },
     {
         value:'SE',
-        label:'Second Year'
+        label:'JSS2'
     },
     {
         value:'TE',
-        label:'Third Year'
+        label:'JSS3'
     },
-    {
-        value:'BE',
-        label:'Fourth Year'
-    },
+    // {
+    //     value:'BE',
+    //     label:'Fourth Year'
+    // },
 ]
 
 export const departmentOptions = [
@@ -65,7 +65,7 @@ export const departmentOptions = [
 export const featuresInfo = [
     {
         img:<Grid color="#09A407" size={22}/>,
-        text:'Join multiple courses under a single classroom'
+        text:'Join multiple subject under a single classroom'
     },
     {
         img:<Download color="#09A407" size={22}/>,

@@ -188,8 +188,8 @@ const MyCourses = (props) => {
 								<div style={{marginLeft: '1rem'}}>
 									<h2 className="changeColor" style={{textAlign: "left", fontFamily: 'Poppins', color: theme === 'dark' ? '#eee' : '#232323', fontWeight: 600, fontSize: 28}}>
 										{userInfo ? userInfo.fname : null} {userInfo ? userInfo.lname : null}</h2>
-									<p className="sub" style={{fontFamily: 'Poppins', fontSize: 17, color: '#545454', fontWeight: 600, margin:0, textAlign: 'left'}}>
-										{userType[0].toUpperCase() + userType.slice(1,userType.length)}</p>
+									{/* <p className="sub" style={{fontFamily: 'Poppins', fontSize: 17, color: '#545454', fontWeight: 600, margin:0, textAlign: 'left'}}>
+										{userType[0].toUpperCase() + userType.slice(1,userType.length)}</p> */}
 								<p className="sub" style={{fontFamily: 'Poppins', fontSize: 16, color: '#545454', fontWeight: 500, margin:0, textAlign: "left"}}>
 								{year} {department}</p>
                 </div>

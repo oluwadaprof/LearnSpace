@@ -35,7 +35,7 @@ const AppRouter = () => {
 					{/* <Sidebar/>  */}
 					<div>
 					
-						<Route path="/" exact component={Home} exact/>	
+						<Route path="/" exact component={Home} />	
 						<Route path="/course/*" component={Course1} exact/>
 						<Route path="/assignments/*" component={AssignmentDetails} exact/> 
 						<Route path="/assessmentreport/*" component={AssessmentReport}/>
