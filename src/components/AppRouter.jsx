@@ -1,13 +1,13 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Course1 from './Course1';
-import Course2 from './Course2';
+// import Course2 from './Course2';
 import Home from './Home';
 import Sidebar from './Sidebar';
 import Register from './Register'
-import CreateCourse from './CreateCourse'
+// import CreateCourse from './CreateCourse'
 import AssignmentDetails from './AssignmentDetails'
-import Autograde from './Autograde'
+// import Autograde from './Autograde'
 import UserTypeContextProvider from './contexts/UserTypeContext';
 import StudentDetailsContextProvider from './contexts/StudentDetailsContext';
 import AssessmentReport from './AssessmentReport'
@@ -21,7 +21,7 @@ import Quiz from './Quiz'
 const AppRouter = () => {
 
 
-	const [theme, setTheme] = React.useState('light')
+	// const [theme, setTheme] = React.useState('light')
 
 	return (
 		<div>

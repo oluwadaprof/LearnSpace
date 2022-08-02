@@ -45,19 +45,19 @@ export const departmentOptions = [
     },
     {
         value:'CS',
-        label:'Computer Science'
+        label:'Commercial'
     },
     {
         value:'ME',
-        label:'Mechanical'
+        label:'Art'
     },
     {
         value:'EL',
-        label:'Electrical'
+        label:'Engineering'
     },
     {
         value:'ENTC',
-        label:'Electronics & Comm'
+        label:'Science'
     },
 ]
 

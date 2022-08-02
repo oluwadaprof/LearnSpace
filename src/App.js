@@ -1,7 +1,7 @@
 import'bootstrap/dist/css/bootstrap.min.css';
 import AppRouter from './components/AppRouter';
 import React from 'react';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 import { ToastContainerCustom } from './components/Toasts'
 import { Scrollbars } from 'react-custom-scrollbars';
 

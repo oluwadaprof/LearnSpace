@@ -1,15 +1,15 @@
 import React, { useRef, useState } from 'react'
-import {Activity, ArrowLeft, BarChart2, Download, Users} from 'react-feather'
+import {Activity, ArrowLeft, BarChart2, Download} from 'react-feather'
 import {getRandomUser2} from './random'
 import { Line, defaults, Bar} from 'react-chartjs-2'
 import userImage from '../assets/user.png'
-import userImage2 from '../assets/user2.png'
+// import userImage2 from '../assets/user2.png'
 import userImage3 from '../assets/user3.png'
 import userImage4 from '../assets/user4.png'
 import Toggle from 'react-toggle'
 import "react-toggle/style.css"
 import './Sidebar.css'
-import { Chart as ChartJS } from 'react-chartjs-2';
+// import { Chart as ChartJS } from 'react-chartjs-2';
 import './course.css'
 import Axios from 'axios'
 import jsPDF from "jspdf";
@@ -47,9 +47,9 @@ const generatePDF = (tickets,notSubmittedTickets) => {
         tableRowsNotSubmitted.push(ticketData);
       });
 
-    const topper = tickets.length ? tickets.reduce(function(prev, current) {
-        return (prev.marks > current.marks) ? prev : current
-    }):null
+    // const topper = tickets.length ? tickets.reduce(function(prev, current) {
+    //     return (prev.marks > current.marks) ? prev : current
+    // }):null
     
     
     let avg = tickets ? (tickets.filter(s => s.marks_obtained).reduce((r, c) => r + c.marks_obtained, 0) / tickets.length).toFixed(2): null
@@ -106,13 +106,13 @@ const AssessmentReport = ({history}) => {
         }
     }
 
-	const [ignored, setIgnored] = React.useState(0)
+	const [ignored] = React.useState(0)
     const [assignment,setAssignment] = useState({})
     const [studentMarks, setStudentMarks] = useState([])
 
     let arr = window.location.href.split('/');
     let assignmentID = arr[arr.length -1];
-    const [studentCount,setStudentCount] = useState(0)
+    const [setStudentCount] = useState(0)
     const [studentMarksInfoLength, setStudentMarksInfoLength] = useState(null)
     const [topper, setTopper] = useState(null)
     const [avg, setAvg] = useState(null)
@@ -132,7 +132,7 @@ const AssessmentReport = ({history}) => {
 			setAssignment(a);
 		})
 		.catch(() => console.log('error'))
-    },[ignored])
+    },[ignored,assignmentID])
     
     React.useEffect(() => {
 		let arr = window.location.href.split('/');
@@ -160,7 +160,7 @@ const AssessmentReport = ({history}) => {
 		})
         .catch(() => console.log('error'))
         
-    },[])
+    },[assignmentID])
 
     React.useEffect(() => {
         
@@ -173,6 +173,7 @@ const AssessmentReport = ({history}) => {
                     }
                     studentMarksInfo.push(marksObj)
                 }
+                return student;
             })
         } else {
             console.log('No submissoins')
@@ -191,7 +192,7 @@ const AssessmentReport = ({history}) => {
 
         console.log(studentMarksList)
         
-    }, [studentMarks])
+    }, [studentMarks, studentMarksInfo, studentMarksList])
 
     React.useEffect(() => {
 		Axios.get(`https://dbms-back.herokuapp.com/marks/${assignmentID}`)
@@ -220,6 +221,7 @@ const AssessmentReport = ({history}) => {
                     }
                     studentMarksInfo.push(marksObj)
                 }
+                return student;
         })}
         let labelArr = []
         
