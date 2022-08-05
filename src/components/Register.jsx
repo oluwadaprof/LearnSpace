@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import registerPic from '../assets/register.png'
 import userImage from '../assets/user.png'
+import lasuLogo from '../assets/lasulogo-review.png'
 
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -654,7 +655,8 @@ const Register = () => {
             <div style={{width: '50%', height: '100%', backgroundColor: '#f6f6f6', overflow: 'visible', zIndex: 999}}>
                 
                 <div style={{display: "flex", flexDirection: "row", marginBottom: '1rem', alignItems: "center", alignSelf: "center", marginTop: '15%', justifyContent: "center"}}>
-                        <Codesandbox size={30} color="#09A407"/>
+                        {/* <Codesandbox size={30} color="#09A407"/> */}
+                        <img src={lasuLogo} style={{height: '2.1rem', width:'2.8rem'}}/>
                         <div style={{alignItems: "flex-start", display: "flex"}}>
                             <p style={{fontFamily: 'Poppins', fontSize: 19, color: '#232323', fontWeight: 600, paddingLeft: 10, margin:0}}>LearnSpace</p>
                         </div>
